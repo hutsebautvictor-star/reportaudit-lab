@@ -5,7 +5,7 @@ La versión inicial y sus hallazgos se conservan como evidencia en Git.
 """
 
 import os
-import re
+import string
 import sqlite3
 import subprocess
 
@@ -41,9 +41,20 @@ def buscar_reportes_cliente(nombre_cliente, ruta_db=RUTA_DB):
 
 def convertir_a_pdf(nombre_archivo):
     """Convierte un reporte HTML a PDF usando la utilidad del sistema."""
-    # Solo nombres HTML locales: no rutas, opciones del programa ni metacaracteres.
-    if not isinstance(nombre_archivo, str) or not re.fullmatch(
-        r"[A-Za-z0-9][A-Za-z0-9_.-]*\.html", nombre_archivo
+    # Acotar el nombre evita rutas, opciones del programa y entradas desmesuradas.
+    if (
+        not isinstance(nombre_archivo, str)
+        or len(nombre_archivo) > 255
+        or not nombre_archivo.endswith(".html")
+    ):
+        raise ValueError("Nombre de archivo no válido")
+    nombre_base = nombre_archivo[:-5]
+    alfanumericos = string.ascii_letters + string.digits
+    permitidos = alfanumericos + "_.-"
+    if (
+        not nombre_base
+        or nombre_base[0] not in alfanumericos
+        or any(caracter not in permitidos for caracter in nombre_base)
     ):
         raise ValueError("Nombre de archivo no válido")
     salida = nombre_archivo + ".pdf"

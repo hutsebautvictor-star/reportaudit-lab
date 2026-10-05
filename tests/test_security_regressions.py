@@ -43,7 +43,7 @@ class SecurityRegressions(unittest.TestCase):
 
     def test_unsafe_filenames_never_reach_converter(self):
         with patch.object(audit.subprocess, 'run') as runner:
-            for filename in ['../private.html', '/etc/passwd', '-option.html', 'a.html;id', '$(id).html', '', 'https://example.com/a.html']:
+            for filename in ['../private.html', '/etc/passwd', '-option.html', 'a.html;id', '$(id).html', '', 'https://example.com/a.html', '0' * 3000 + '.html']:
                 with self.subTest(filename=filename), self.assertRaises(ValueError):
                     audit.convertir_a_pdf(filename)
             runner.assert_not_called()
