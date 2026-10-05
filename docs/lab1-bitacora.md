@@ -154,3 +154,19 @@ justificación.
 - El PDF de 62 páginas termina en K.4; L-T solo están anunciadas en el índice. Entrega final todavía incompleta.
 
 Dependabot y Grype coinciden en los doce identificadores GHSA. La alerta de Werkzeug CVE-2024-34069 es High y tiene versión corregida 3.0.3; el VEX limita la no afectación al arranque con debug=False. Dependabot ha abierto los PR #17 (Flask), #18 (Werkzeug) y #19 (Jinja2), pendientes de checks y revisión. No se han fusionado ni cerrado las alertas.
+
+## Integración SAST: PR #21
+
+- Organization Key: hutsebautvictor-star.
+- Project Key: hutsebautvictor-star_reportaudit-lab.
+- Automatic Analysis desactivado según la captura aportada por el estudiante.
+- SONAR_TOKEN comprobado por nombre en Actions y Dependabot; nunca se registra su valor.
+- PR: https://github.com/hutsebautvictor-star/reportaudit-lab/pull/21.
+- Ejecución: https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/37353921995.
+- Checks SAST - SonarQube Cloud y SAST - CodeQL: success. Ambos son obligatorios en main y se exige que la rama esté actualizada.
+- La aprobación de un compañero sigue siendo obligatoria; PR pendiente de revisión y fusión.
+- CodeQL: análisis real del merge ref del PR #21, 50 reglas y 0 resultados; evidencia en codeql-pr21-analyses.json. No se generaliza como ausencia de riesgos: la auditoría manual y SonarQube encuentran fallos.
+- Snapshot previo de análisis automático de main: 6 vulnerabilities y 0 security hotspots, 205 líneas. Es provisional y no sustituye la línea base de main mediante CI tras fusionar el PR.
+- SonarQube for IDE 6.0.1 instalado y verificado en ~/.vscode-server/extensions dentro de Ubuntu. Connected Mode y su comparación con el análisis sin conexión pendientes.
+- El plan Free todavía está pendiente de confirmar; la captura del estudiante muestra una prueba Team de 14 días.
+- No se han corregido los problemas del código ni se declara completada la comparación final.

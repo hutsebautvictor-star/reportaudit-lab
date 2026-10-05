@@ -1,0 +1,34 @@
+{
+  "component": {
+    "id": "AaENOCBtNSV4mnU4oC0b",
+    "key": "hutsebautvictor-star_reportaudit-lab",
+    "name": "reportaudit-lab",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "bugs",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "code_smells",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "ncloc",
+        "value": "205"
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "6",
+        "bestValue": false
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  }
+}
