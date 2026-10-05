@@ -1,0 +1,22 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/hutsebautvictor-star/reportaudit-lab/vex/2026-001",
+  "author": "hutsebautvictor-star (nombre completo pendiente de confirmar)",
+  "timestamp": "2026-10-05T17:50:42.077540Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2024-34069"
+      },
+      "products": [
+        {
+          "@id": "pkg:pypi/werkzeug@3.0.1"
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_in_execute_path",
+      "impact_statement": "El aviso GHSA-2g68-c3qc-8985 afecta al depurador de Werkzeug. El arranque documentado usa debug=False en app/servicio.py:64; no se habilita el código vulnerable. Revalidar si otro comando habilita debug. Se recomienda actualizar igualmente. Referencia: https://github.com/advisories/GHSA-2g68-c3qc-8985"
+    }
+  ]
+}
