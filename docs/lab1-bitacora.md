@@ -101,7 +101,7 @@ justificación.
 | Vulnerabilidades en SonarQube Cloud (rama main) |  |  |
 | Security Hotspots por revisar en SonarQube Cloud |  |  |
 | Vulnerabilidades de Grype sobre el SBOM | 12 | Pendiente |
-| Alertas abiertas de Dependabot |  |  |
+| Alertas abiertas de Dependabot | 12 | Pendiente |
 
 ---
 
@@ -141,7 +141,7 @@ justificación.
 
 - main protegida: una aprobación obligatoria, administradores incluidos, sin force push ni eliminación.
 - PR #14: plantilla; PR #15: Semgrep; PR #16: Dependabot. Pendientes de revisión y fusión; todavía no hay compañero.
-- Dependabot alerts y automated security fixes activados. Configuración pendiente de fusionar; lectura de alertas de GitHub pendiente.
+- Dependabot alerts y automated security fixes activados. Configuración pendiente de fusionar; 12 alertas abiertas leídas; coinciden por identificador GHSA con Grype.
 - Servicio comprobado mediante el cliente de pruebas de Flask: respuestas 200 en / y /reportes.
 - Syft 1.52.0, Grype 0.119.0 y Trivy 0.74.0 instalados con verificación SHA-256 satisfactoria.
 - Semgrep de desarrollo está en ~/.local/share/reportaudit-tools; el hook usa su entorno aislado y v1.172.0. Ambos detectan tres hallazgos de YAML/MD5.
@@ -152,3 +152,5 @@ justificación.
 - Triage basado en los avisos enlazados y rutas actuales. Revalidar las conclusiones si cambian código, arranque o sistema operativo.
 - Nombre completo del autor pendiente de confirmar. No se inventan respuestas a preguntas ausentes de la guía disponible.
 - El PDF de 62 páginas termina en K.4; L-T solo están anunciadas en el índice. Entrega final todavía incompleta.
+
+Dependabot y Grype coinciden en los doce identificadores GHSA. La alerta de Werkzeug CVE-2024-34069 es High y tiene versión corregida 3.0.3; el VEX limita la no afectación al arranque con debug=False. Dependabot ha abierto los PR #17 (Flask), #18 (Werkzeug) y #19 (Jinja2), pendientes de checks y revisión. No se han fusionado ni cerrado las alertas.

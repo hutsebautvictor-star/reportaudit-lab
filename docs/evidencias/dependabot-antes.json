@@ -1,0 +1,98 @@
+[
+  {
+    "number": 12,
+    "state": "open",
+    "ghsa_id": "GHSA-q34m-jh98-gwm2",
+    "package": "Werkzeug",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/12"
+  },
+  {
+    "number": 11,
+    "state": "open",
+    "ghsa_id": "GHSA-68rp-wp8r-4726",
+    "package": "flask",
+    "severity": "low",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/11"
+  },
+  {
+    "number": 10,
+    "state": "open",
+    "ghsa_id": "GHSA-29vq-49wr-vm6x",
+    "package": "werkzeug",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/10"
+  },
+  {
+    "number": 9,
+    "state": "open",
+    "ghsa_id": "GHSA-87hc-h4r5-73f7",
+    "package": "Werkzeug",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/9"
+  },
+  {
+    "number": 8,
+    "state": "open",
+    "ghsa_id": "GHSA-hgf8-39gv-g3f2",
+    "package": "werkzeug",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/8"
+  },
+  {
+    "number": 7,
+    "state": "open",
+    "ghsa_id": "GHSA-cpwx-vrp4-4pq7",
+    "package": "Jinja2",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/7"
+  },
+  {
+    "number": 6,
+    "state": "open",
+    "ghsa_id": "GHSA-gmj6-6f8f-6699",
+    "package": "jinja2",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/6"
+  },
+  {
+    "number": 5,
+    "state": "open",
+    "ghsa_id": "GHSA-q2x7-8rv6-6q7h",
+    "package": "jinja2",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/5"
+  },
+  {
+    "number": 4,
+    "state": "open",
+    "ghsa_id": "GHSA-f9vj-2wh5-fj8j",
+    "package": "Werkzeug",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/4"
+  },
+  {
+    "number": 3,
+    "state": "open",
+    "ghsa_id": "GHSA-2g68-c3qc-8985",
+    "package": "Werkzeug",
+    "severity": "high",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/3"
+  },
+  {
+    "number": 2,
+    "state": "open",
+    "ghsa_id": "GHSA-h75v-3vvj-5mfj",
+    "package": "Jinja2",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/2"
+  },
+  {
+    "number": 1,
+    "state": "open",
+    "ghsa_id": "GHSA-h5c8-rqwp-cp95",
+    "package": "jinja2",
+    "severity": "medium",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/dependabot/1"
+  }
+]
