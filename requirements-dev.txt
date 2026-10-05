@@ -1,0 +1,2 @@
+# Solo pruebas y cobertura, no dependencias del servicio.
+coverage==7.16.2

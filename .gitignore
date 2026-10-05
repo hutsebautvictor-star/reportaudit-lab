@@ -16,3 +16,8 @@ tools/
 
 # --- Secretos locales: NUNCA se versionan ---
 .env
+
+# Cobertura generada localmente o en CI
+.coverage
+coverage.xml
+htmlcov/
