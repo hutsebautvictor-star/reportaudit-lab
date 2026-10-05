@@ -96,7 +96,7 @@ justificación.
 
 | Medida | Antes | Después |
 |---|---|---|
-| Hallazgos de Semgrep en `app/` | 3 | Pendiente |
+| Hallazgos de Semgrep en `app/` | 3 | 0 en la rama de corrección |
 | Alertas abiertas de CodeQL (Security → Code scanning) |  |  |
 | Vulnerabilidades en SonarQube Cloud (rama main) |  |  |
 | Security Hotspots por revisar en SonarQube Cloud |  |  |
@@ -170,3 +170,19 @@ Dependabot y Grype coinciden en los doce identificadores GHSA. La alerta de Werk
 - SonarQube for IDE 6.0.1 instalado y verificado en ~/.vscode-server/extensions dentro de Ubuntu. Connected Mode y su comparación con el análisis sin conexión pendientes.
 - El plan Free todavía está pendiente de confirmar; la captura del estudiante muestra una prueba Team de 14 días.
 - No se han corregido los problemas del código ni se declara completada la comparación final.
+
+## Correcciones verificadas en el PR #22
+
+- Connected Mode vinculado a hutsebautvictor-star_reportaudit-lab; evidencia sin credenciales en connected-mode-proyecto.json. No se inventan resultados de la comparación del editor antes y después de conectar.
+- PR: https://github.com/hutsebautvictor-star/reportaudit-lab/pull/22; revisión analizada: 4614c5dcd1934207772ba363b2478ed18a491b4d.
+- SQL parametrizado: el apóstrofo funciona como dato y la entrada de inyección no accede a otros clientes.
+- PDF: nombres HTML acotados, archivos existentes en reportes/, rechazo de enlaces fuera de la carpeta y ejecución sin shell. wkhtmltopdf está simulado en las pruebas: el renderizado real sigue sin verificar.
+- YAML seguro, hash de contraseñas scrypt con sal aleatoria y retirada de credenciales incrustadas y de sus fragmentos en logs.
+- No se ha revocado ninguna credencial externa: el proyecto recibido incluye muestras docentes y no hay proveedor real configurado. Si los valores históricos fueran reales, su propietario debe revocarlos.
+- 11 pruebas de regresión pasan. Cobertura local total de app/: 97%; módulo de negocio: 100%. SonarQube informa 100% de cobertura sobre código nuevo del PR.
+- Semgrep: 3 hallazgos antes, 0 después. El hook con v1.172.0 también pasa sobre el código corregido.
+- CodeQL: 0 alertas abiertas en el PR final; SonarQube Quality Gate: OK. Los cuatro checks publicados del PR final pasan.
+- coverage==7.16.2 (Apache-2.0) es una herramienta de desarrollo, fijada en requirements-dev.txt; no se incorpora a las dependencias del servicio. CI ejecuta las pruebas y envía coverage.xml al análisis.
+- La rama incluye el pipeline del PR #21, que debe fusionarse primero. Todos los PR siguen pendientes de aprobación del compañero; no se ha eludido la protección de main.
+- Los resultados del PR no sustituyen una medición de main después de fusionar. En main siguen el código original y las doce alertas de dependencias, con actualizaciones pendientes en los PR #17-19.
+- La entrega completa, las preguntas ausentes de la guía disponible y el bloque L-T siguen pendientes.

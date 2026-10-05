@@ -1,0 +1,16 @@
+test_apostrophe_is_a_literal_client_name (test_security_regressions.SecurityRegressions.test_apostrophe_is_a_literal_client_name) ... ok
+test_homepage_and_report_endpoint (test_security_regressions.SecurityRegressions.test_homepage_and_report_endpoint) ... ok
+test_http_api_rejects_unsafe_filename (test_security_regressions.SecurityRegressions.test_http_api_rejects_unsafe_filename) ... ok
+test_missing_report_never_reaches_converter (test_security_regressions.SecurityRegressions.test_missing_report_never_reaches_converter) ... ok
+test_notification_does_not_print_credential_fragments (test_security_regressions.SecurityRegressions.test_notification_does_not_print_credential_fragments) ... ok
+test_password_hash_has_random_salt_and_checks_password (test_security_regressions.SecurityRegressions.test_password_hash_has_random_salt_and_checks_password) ... ok
+test_pdf_conversion_does_not_invoke_a_shell (test_security_regressions.SecurityRegressions.test_pdf_conversion_does_not_invoke_a_shell) ... ok
+test_sql_input_cannot_return_other_clients (test_security_regressions.SecurityRegressions.test_sql_input_cannot_return_other_clients) ... ok
+test_symlink_cannot_escape_report_directory (test_security_regressions.SecurityRegressions.test_symlink_cannot_escape_report_directory) ... ok
+test_unsafe_filenames_never_reach_converter (test_security_regressions.SecurityRegressions.test_unsafe_filenames_never_reach_converter) ... ok
+test_yaml_rejects_python_object_tags (test_security_regressions.SecurityRegressions.test_yaml_rejects_python_object_tags) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.907s
+
+OK
