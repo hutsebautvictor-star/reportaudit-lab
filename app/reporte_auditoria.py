@@ -8,6 +8,7 @@ import os
 import string
 import sqlite3
 import subprocess
+from pathlib import Path
 
 from werkzeug.security import generate_password_hash
 
@@ -16,6 +17,8 @@ import yaml
 # Las credenciales se suministran desde el entorno, nunca desde el repositorio.
 NOTIFICATION_API_KEY = os.environ.get("NOTIFICATION_API_KEY", "")
 SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD", "")
+
+RUTA_REPORTES = Path(__file__).resolve().parent.parent / "reportes"
 
 RUTA_DB = os.path.join(os.path.dirname(__file__), "..", "reportes.db")
 
@@ -57,9 +60,18 @@ def convertir_a_pdf(nombre_archivo):
         or any(caracter not in permitidos for caracter in nombre_base)
     ):
         raise ValueError("Nombre de archivo no válido")
-    salida = nombre_archivo + ".pdf"
-    subprocess.run(["wkhtmltopdf", nombre_archivo, salida], check=True)
-    return salida
+    # El argumento procede del inventario de archivos del servidor, no de la petición.
+    archivos = {ruta.name: ruta for ruta in RUTA_REPORTES.glob("*.html") if ruta.is_file()}
+    try:
+        entrada = archivos[nombre_archivo].resolve()
+    except KeyError as error:
+        raise ValueError("Reporte HTML no disponible") from error
+    if entrada.parent != RUTA_REPORTES.resolve():
+        raise ValueError("Reporte fuera de la carpeta permitida")
+    salida = entrada.with_name(entrada.name + ".pdf")
+    subprocess.run(["wkhtmltopdf", str(entrada), str(salida)], check=True)
+    return salida.name
+
 
 
 def hash_password_legacy(password):

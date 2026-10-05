@@ -19,6 +19,13 @@ class SecurityRegressions(unittest.TestCase):
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
+        self.reports = Path(self.temp.name) / 'reportes'
+        self.reports.mkdir()
+        self.report = self.reports / 'report-2026.html'
+        self.report.write_text('<p>Report</p>', encoding='utf-8')
+        reports_patch = patch.object(audit, 'RUTA_REPORTES', self.reports)
+        reports_patch.start()
+        self.addCleanup(reports_patch.stop)
         self.db = Path(self.temp.name) / 'reports.db'
         with sqlite3.connect(self.db) as connection:
             connection.execute('CREATE TABLE reportes (id INTEGER, cliente TEXT, monto REAL)')
@@ -37,7 +44,7 @@ class SecurityRegressions(unittest.TestCase):
         with patch.object(audit.subprocess, 'run') as runner:
             self.assertEqual(audit.convertir_a_pdf('report-2026.html'), 'report-2026.html.pdf')
             args, kwargs = runner.call_args
-            self.assertEqual(args[0], ['wkhtmltopdf', 'report-2026.html', 'report-2026.html.pdf'])
+            self.assertEqual(args[0], ['wkhtmltopdf', str(self.report), str(self.report) + '.pdf'])
             self.assertFalse(kwargs.get('shell', False))
             self.assertTrue(kwargs['check'])
 
@@ -47,6 +54,27 @@ class SecurityRegressions(unittest.TestCase):
                 with self.subTest(filename=filename), self.assertRaises(ValueError):
                     audit.convertir_a_pdf(filename)
             runner.assert_not_called()
+
+    def test_missing_report_never_reaches_converter(self):
+        with patch.object(audit.subprocess, 'run') as runner, self.assertRaises(ValueError):
+            audit.convertir_a_pdf('missing.html')
+        runner.assert_not_called()
+
+    def test_symlink_cannot_escape_report_directory(self):
+        outside = Path(self.temp.name) / 'private.html'
+        outside.write_text('private', encoding='utf-8')
+        (self.reports / 'linked.html').symlink_to(outside)
+        with patch.object(audit.subprocess, 'run') as runner, self.assertRaises(ValueError):
+            audit.convertir_a_pdf('linked.html')
+        runner.assert_not_called()
+
+    def test_homepage_and_report_endpoint(self):
+        client = app.test_client()
+        self.assertEqual(client.get('/').status_code, 200)
+        with patch('servicio.buscar_reportes_cliente', return_value=[(1, 'client', 100)]):
+            response = client.get('/reportes', query_string={'cliente': 'client'})
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.get_json()['total_registros'], 1)
 
     def test_yaml_rejects_python_object_tags(self):
         config = Path(self.temp.name) / 'config.yaml'
