@@ -1,0 +1,63 @@
+SAST local (Semgrep).....................................................Failed
+- hook id: semgrep
+- exit code: 1
+
+┌─────────────┐
+│ Scan Status │
+└─────────────┘
+  Scanning 3 files tracked by git with 202 Code rules:
+                                                                                                                        
+  Language      Rules   Files          Origin      Rules                                                                
+ ─────────────────────────────        ───────────────────                                                               
+  <multilang>      36       3          Community     202                                                                
+  python          151       2                                                                                           
+  yaml              1       1                                                                                           
+                                                                                                                        
+                
+                
+┌──────────────┐
+│ Scan Summary │
+└──────────────┘
+✅ Scan completed successfully.
+ • Findings: 3 (3 blocking)
+ • Rules run: 188
+ • Targets scanned: 3
+ • Parsed lines: ~100.0%
+ • No ignore information available
+Ran 188 rules on 3 files: 3 findings.
+                   
+                   
+┌─────────────────┐
+│ 3 Code Findings │
+└─────────────────┘
+                            
+    app/reporte_auditoria.py
+   ❯❯❱ python.lang.security.deserialization.avoid-pyyaml-load.avoid-pyyaml-load
+          ❰❰ Blocking ❱❱
+          Detected a possible YAML deserialization vulnerability. `yaml.unsafe_load`, `yaml.Loader`,          
+          `yaml.CLoader`, and `yaml.UnsafeLoader` are all known to be unsafe methods of deserializing YAML. An
+          attacker with control over the YAML input could create special YAML input that allows the attacker  
+          to run arbitrary Python code. This would allow the attacker to steal files, download and install    
+          malware, or otherwise take over the machine. Use `yaml.safe_load` or `yaml.SafeLoader` instead.     
+          Details: https://sg.run/we9Y                                                                        
+                                                                                                              
+           ▶▶┆ Autofix ▶ yaml.load(f, Loader=yaml.Loader)
+           33┆ config = yaml.load(f, Loader=yaml.Loader)
+   
+    ❯❱ python.lang.security.insecure-hash-algorithms-md5.insecure-hash-algorithm-md5
+          ❰❰ Blocking ❱❱
+          Detected MD5 hash algorithm which is considered insecure. MD5 is not collision resistant and is
+          therefore not suitable as a cryptographic signature. Use SHA256 or SHA3 instead.               
+          Details: https://sg.run/vYrY                                                                   
+                                                                                                         
+           57┆ return hashlib.md5(password.encode()).hexdigest()
+   
+    ❯❱ python.lang.security.audit.md5-used-as-password.md5-used-as-password
+          ❰❰ Blocking ❱❱
+          It looks like MD5 is used as a password hash. MD5 is not considered a secure password hash because  
+          it can be cracked by an attacker in a short amount of time. Use a suitable password hashing function
+          such as scrypt. You can use `hashlib.scrypt`.                                                       
+          Details: https://sg.run/5DwD                                                                        
+                                                                                                              
+           57┆ return hashlib.md5(password.encode()).hexdigest()
+

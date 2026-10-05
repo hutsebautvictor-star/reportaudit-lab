@@ -1,0 +1,10 @@
+NAME          VERSION  TYPE    
+blinker       1.7.0    python  
+click         8.1.7    python  
+colorama      0.4.6    python  
+flask         3.0.0    python  
+itsdangerous  2.1.2    python  
+jinja2        3.1.2    python  
+markupsafe    3.0.3    python  
+pyyaml        6.0.3    python  
+werkzeug      3.0.1    python
