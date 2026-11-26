@@ -242,3 +242,21 @@ Workflow preparado en [scorecard.yml](../.github/workflows/scorecard.yml) para e
 ### T. Expediente
 
 El [expediente preliminar](cra/expediente-evidencias.md) recoge las doce comprobaciones. Quedan los enlaces de la Release, el aviso privado, las ejecuciones finales y la revisión por el compañero.
+
+## Continuación del 26 de noviembre de 2026
+
+Se publicaron y comprobaron los seis [PR del bloque final](evidencias/estado-pr-bloque-final.json):
+
+| Parte | Borrador | Base provisional |
+|---|---|---|
+| O. Gitleaks | [#23](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/23) | PR de corrección #22 |
+| P. Controles SCA y secretos | [#24](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/24) | PR de Gitleaks #23 |
+| Q. Política de seguridad | [#25](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/25) | `main` |
+| R. Publicación firmada | [#26](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/26) | `main` |
+| S. Scorecard | [#27](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/27) | `main` |
+| T. Expediente | [#28](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/28) | PR de evidencias #20 |
+
+- GitHub confirmó que el canal privado de avisos está habilitado. Queda el simulacro con el compañero y la integración de la política.
+- En el [PR de prueba #29](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/29), se ejecutaron los cuatro controles sin cambiar las dependencias respecto de `main`. SCA - pip-audit falló según lo esperado con 25 avisos en tres paquetes. Gitleaks, CodeQL y SonarQube pasaron. El PR se cerró sin fusionar. Se conserva el [registro de GitHub Actions](evidencias/puerta-sca-pr29.json).
+- En la [prueba local del empaquetado](evidencias/paquete-prueba-local.json), el paso de publicación generó un archivo con los 59 ficheros versionados del commit de prueba. Rechazó una etiqueta inválida y un commit ajeno a la referencia de `main` simulada. Las huellas de la copia original y la alterada difieren. No se creó una Release ni se emitieron atestaciones con esta prueba.
+- El [PR #21](https://github.com/hutsebautvictor-star/reportaudit-lab/pull/21) seguía pendiente de aprobación con los checks en verde al comprobarlo. El compañero debe aceptar la invitación antes de revisar. Cambiar la base de cada borrador apilado cuando se integre su PR anterior y verificar los checks antes de fusionar.

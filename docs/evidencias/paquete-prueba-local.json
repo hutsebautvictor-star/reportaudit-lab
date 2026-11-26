@@ -1,0 +1,9 @@
+{
+  "scope": "Local packaging trial using a simulated main ref. No tag, release or attestation was created.",
+  "commit": "df127556a8da069ec7fe99a44332c825be2fd872",
+  "file_count": 59,
+  "rejected_unmerged_commit": true,
+  "rejected_invalid_tag": true,
+  "archive_sha256": "2768c5ed5fe26582f34232c9e9d88589f9db3a7712143f5874d2755f4627a15e",
+  "modified_copy_sha256": "ebc78a669f92119f03f732d5584e19fd9db684a45c00a8b2f6b24e49ed6b61d1"
+}

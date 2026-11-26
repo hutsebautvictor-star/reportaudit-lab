@@ -1,0 +1,62 @@
+[
+  {
+    "part": "O",
+    "issue": 8,
+    "baseRefName": "fix/security-audit",
+    "headRefName": "ci/gitleaks-regla-reportaudit",
+    "isDraft": true,
+    "number": 23,
+    "state": "OPEN",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/23"
+  },
+  {
+    "part": "P",
+    "issue": 9,
+    "baseRefName": "ci/gitleaks-regla-reportaudit",
+    "headRefName": "ci/puertas-sca-secretos",
+    "isDraft": true,
+    "number": 24,
+    "state": "OPEN",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/24"
+  },
+  {
+    "part": "Q",
+    "issue": 10,
+    "baseRefName": "main",
+    "headRefName": "docs/security-policy",
+    "isDraft": true,
+    "number": 25,
+    "state": "OPEN",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/25"
+  },
+  {
+    "part": "R",
+    "issue": 11,
+    "baseRefName": "main",
+    "headRefName": "ci/release-firmada",
+    "isDraft": true,
+    "number": 26,
+    "state": "OPEN",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/26"
+  },
+  {
+    "part": "S",
+    "issue": 12,
+    "baseRefName": "main",
+    "headRefName": "ci/scorecard",
+    "isDraft": true,
+    "number": 27,
+    "state": "OPEN",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/27"
+  },
+  {
+    "part": "T",
+    "issue": 13,
+    "baseRefName": "docs/audit-baseline",
+    "headRefName": "docs/expediente-evidencias",
+    "isDraft": true,
+    "number": 28,
+    "state": "OPEN",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/28"
+  }
+]

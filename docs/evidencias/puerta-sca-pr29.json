@@ -1,0 +1,61 @@
+{
+  "scope": "GitHub Actions exercise using the unchanged dependency manifests from main.",
+  "pull_request": {
+    "number": 29,
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/29",
+    "state": "CLOSED",
+    "isDraft": true,
+    "mergedAt": null,
+    "headRefOid": "b4fc3e962c0811a06e79556343c7bbc5cdc8c775"
+  },
+  "sca": {
+    "conclusion": "FAILURE",
+    "vulnerability_count": 25,
+    "affected_package_count": 3,
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/45792817377/job/139815851116"
+  },
+  "checks": [
+    {
+      "name": "SAST - SonarQube Cloud",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/45792817377/job/139815851165"
+    },
+    {
+      "name": "SAST - CodeQL",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/45792817377/job/139815850769"
+    },
+    {
+      "name": "SCA - pip-audit",
+      "status": "COMPLETED",
+      "conclusion": "FAILURE",
+      "detailsUrl": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/45792817377/job/139815851116"
+    },
+    {
+      "name": "Secretos - Gitleaks",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/45792817377/job/139815851307"
+    },
+    {
+      "name": "CodeQL",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/hutsebautvictor-star/reportaudit-lab/runs/139816163995"
+    },
+    {
+      "name": "SonarCloud",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/hutsebautvictor-star/reportaudit-lab/runs/139816278137"
+    },
+    {
+      "name": "SonarCloud Code Analysis",
+      "status": "COMPLETED",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://sonarcloud.io/dashboard?id=hutsebautvictor-star_reportaudit-lab&pullRequest=29"
+    }
+  ]
+}
