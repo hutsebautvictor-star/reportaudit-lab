@@ -1,0 +1,215 @@
+{
+  "tool": "pip-audit 2.10.1",
+  "requirements_source": "https://raw.githubusercontent.com/pypa/gh-action-pip-audit/v1.1.0/requirements.txt",
+  "scans": {
+    "inicial": {
+      "exit_code": 1,
+      "findings": [
+        {
+          "package": "flask",
+          "version": "3.0.0",
+          "id": "PYSEC-2026-2151",
+          "fix_versions": [
+            "3.1.3"
+          ]
+        },
+        {
+          "package": "flask",
+          "version": "3.0.0",
+          "id": "PYSEC-2026-2151",
+          "fix_versions": [
+            "3.1.3"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1473",
+          "fix_versions": [
+            "3.1.3"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1474",
+          "fix_versions": [
+            "3.1.4"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1475",
+          "fix_versions": [
+            "3.1.5"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1472",
+          "fix_versions": [
+            "3.1.5"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1471",
+          "fix_versions": [
+            "3.1.6"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1473",
+          "fix_versions": [
+            "3.1.3"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1471",
+          "fix_versions": [
+            "3.1.6"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1474",
+          "fix_versions": [
+            "3.1.4"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1475",
+          "fix_versions": [
+            "3.1.5"
+          ]
+        },
+        {
+          "package": "jinja2",
+          "version": "3.1.2",
+          "id": "PYSEC-2026-1472",
+          "fix_versions": [
+            "3.1.5"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2043",
+          "fix_versions": [
+            "3.0.3"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2045",
+          "fix_versions": [
+            "3.0.6"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-1860",
+          "fix_versions": [
+            "3.0.6"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2046",
+          "fix_versions": [
+            "3.1.4"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2044",
+          "fix_versions": [
+            "3.1.5"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2320",
+          "fix_versions": [
+            "3.1.6"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2045",
+          "fix_versions": [
+            "3.0.6"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2046",
+          "fix_versions": [
+            "3.1.4"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2044",
+          "fix_versions": [
+            "3.1.5"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2043",
+          "fix_versions": [
+            "3.0.3"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-2320",
+          "fix_versions": [
+            "3.1.6"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-3417",
+          "fix_versions": [
+            "3.0.6"
+          ]
+        },
+        {
+          "package": "werkzeug",
+          "version": "3.0.1",
+          "id": "PYSEC-2026-4312",
+          "fix_versions": [
+            "3.1.9"
+          ]
+        }
+      ]
+    },
+    "candidato": {
+      "exit_code": 0,
+      "findings": []
+    }
+  }
+}
