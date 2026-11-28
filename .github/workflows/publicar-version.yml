@@ -1,0 +1,71 @@
+name: Publicar versión firmada
+
+on:
+  push:
+    tags: ['v*.*.*']
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    name: Release - SBOM y procedencia
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    env:
+      TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+
+      - name: Comprobar la etiqueta y empaquetar el código de main
+        shell: bash
+        run: |
+          [[ "$TAG" =~ ^v(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)\.(0|[1-9][0-9]*)$ ]]
+          git merge-base --is-ancestor HEAD refs/remotes/origin/main
+          package="reportaudit-${TAG#v}"
+          mkdir -p dist release-source
+          git archive --format=tar.gz --prefix="$package/" -o "dist/$package.tar.gz" HEAD
+          tar -xzf "dist/$package.tar.gz" -C release-source
+
+      - name: Generar el SBOM del código empaquetado
+        uses: anchore/sbom-action@v0.24.3
+        with:
+          path: release-source
+          format: cyclonedx-json
+          output-file: dist/reportaudit-sbom.cdx.json
+          upload-artifact: false
+          upload-release-assets: false
+
+      - name: Calcular las huellas SHA-256
+        working-directory: dist
+        run: sha256sum reportaudit-*.tar.gz reportaudit-sbom.cdx.json > SHA256SUMS
+
+      - name: Atestar la procedencia
+        id: provenance
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/reportaudit-*.tar.gz
+
+      - name: Atestar el SBOM
+        id: sbom
+        uses: actions/attest@v4
+        with:
+          subject-path: dist/reportaudit-*.tar.gz
+          sbom-path: dist/reportaudit-sbom.cdx.json
+
+      - name: Guardar las atestaciones y crear la Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          PROVENANCE_BUNDLE: ${{ steps.provenance.outputs.bundle-path }}
+          SBOM_BUNDLE: ${{ steps.sbom.outputs.bundle-path }}
+        run: |
+          cp "$PROVENANCE_BUNDLE" dist/reportaudit-provenance.sigstore.json
+          cp "$SBOM_BUNDLE" dist/reportaudit-sbom.sigstore.json
+          gh release create "$TAG" dist/* --verify-tag --title "ReportAudit $TAG" \
+            --notes "Includes a CycloneDX SBOM, SHA-256 checksums and Sigstore attestations. See SECURITY.md for verification."
