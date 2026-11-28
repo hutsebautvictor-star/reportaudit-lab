@@ -1,0 +1,157 @@
+{
+  "version": "8.30.1",
+  "source": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_linux_x64.tar.gz",
+  "checksum_source": "https://github.com/gitleaks/gitleaks/releases/download/v8.30.1/gitleaks_8.30.1_checksums.txt",
+  "sha256_expected": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb",
+  "sha256_actual": "551f6fc83ea457d62a0d98237cbad105af8d557003051f41f3e7ca7b3f2470eb",
+  "code_revision": "4614c5dcd1934207772ba363b2478ed18a491b4d",
+  "scans": {
+    "codigo-reglas-por-defecto": {
+      "exit_code": 0,
+      "count": 0,
+      "findings": []
+    },
+    "historial-reglas-por-defecto": {
+      "exit_code": 1,
+      "count": 7,
+      "findings": [
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 14,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:14"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 57,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:57"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 99,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:99"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 238,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:238"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 376,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:376"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 419,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:419"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "app/reporte_auditoria.py",
+          "StartLine": 21,
+          "Commit": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef",
+          "Fingerprint": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef:app/reporte_auditoria.py:generic-api-key:21"
+        }
+      ]
+    },
+    "historial-regla-reportaudit": {
+      "exit_code": 1,
+      "count": 8,
+      "findings": [
+        {
+          "RuleID": "reportaudit-hardcoded-credential",
+          "File": "app/reporte_auditoria.py",
+          "StartLine": 21,
+          "Commit": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef",
+          "Fingerprint": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef:app/reporte_auditoria.py:reportaudit-hardcoded-credential:21"
+        },
+        {
+          "RuleID": "reportaudit-hardcoded-credential",
+          "File": "app/reporte_auditoria.py",
+          "StartLine": 22,
+          "Commit": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef",
+          "Fingerprint": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef:app/reporte_auditoria.py:reportaudit-hardcoded-credential:22"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 14,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:14"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 57,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:57"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 99,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:99"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 238,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:238"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 376,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:376"
+        },
+        {
+          "RuleID": "generic-api-key",
+          "File": "docs/evidencias/sonar-automatico-antes-issues.json",
+          "StartLine": 419,
+          "Commit": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8",
+          "Fingerprint": "a9c9736c4c2290b116b0f9d7c4a6fe5f4c2867d8:docs/evidencias/sonar-automatico-antes-issues.json:generic-api-key:419"
+        }
+      ]
+    },
+    "codigo-regla-reportaudit": {
+      "exit_code": 0,
+      "count": 0,
+      "findings": []
+    },
+    "historial-exclusiones-verificadas": {
+      "exit_code": 1,
+      "count": 2,
+      "findings": [
+        {
+          "RuleID": "reportaudit-hardcoded-credential",
+          "File": "app/reporte_auditoria.py",
+          "StartLine": 21,
+          "Commit": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef",
+          "Fingerprint": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef:app/reporte_auditoria.py:reportaudit-hardcoded-credential:21"
+        },
+        {
+          "RuleID": "reportaudit-hardcoded-credential",
+          "File": "app/reporte_auditoria.py",
+          "StartLine": 22,
+          "Commit": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef",
+          "Fingerprint": "fbeba7003d9b8e6db3bf53d598eb7f773a9e7cef:app/reporte_auditoria.py:reportaudit-hardcoded-credential:22"
+        }
+      ]
+    }
+  }
+}

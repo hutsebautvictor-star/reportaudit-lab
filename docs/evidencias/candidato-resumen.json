@@ -1,0 +1,10 @@
+{
+  "scope": "Candidato local basado en PR #22, #17 y #19. No es una medici\u00f3n de main.",
+  "code_revision": "4614c5dcd1934207772ba363b2478ed18a491b4d",
+  "flask_lockfile_revision": "4934bc07403314f53e8f2c0b954f5eaab9c0d115",
+  "jinja_revision": "03e19efce3416aeb7d08c6f8248cbb04751de032",
+  "scan_status": {
+    "grype": "TimeoutExpired",
+    "trivy": "TimeoutExpired"
+  }
+}
