@@ -1,0 +1,90 @@
+{
+  "main_revision": "c277b91a28092146a8914734696b2a52b8690dcb",
+  "date": "2026-11-28",
+  "pipeline_pull_request": {
+    "number": 21,
+    "html_url": "https://github.com/hutsebautvictor-star/reportaudit-lab/pull/21",
+    "merged_at": "2026-11-28T12:03:02Z"
+  },
+  "run": {
+    "event": "push",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/46142741642",
+    "conclusion": "success"
+  },
+  "jobs": [
+    {
+      "name": "SAST - SonarQube Cloud",
+      "conclusion": "success",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/46142741642/job/140972084129"
+    },
+    {
+      "name": "SAST - CodeQL",
+      "conclusion": "success",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/46142741642/job/140972084307"
+    }
+  ],
+  "open_alerts": [
+    {
+      "number": 2,
+      "tool": "CodeQL",
+      "rule": "py/clear-text-logging-sensitive-data",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/2"
+    },
+    {
+      "number": 3,
+      "tool": "CodeQL",
+      "rule": "py/command-line-injection",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/3"
+    },
+    {
+      "number": 4,
+      "tool": "CodeQL",
+      "rule": "py/sql-injection",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/4"
+    },
+    {
+      "number": 5,
+      "tool": "CodeQL",
+      "rule": "py/weak-sensitive-data-hashing",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/5"
+    },
+    {
+      "number": 6,
+      "tool": "SonarCloud",
+      "rule": "pythonsecurity:S3649",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/6"
+    },
+    {
+      "number": 7,
+      "tool": "SonarCloud",
+      "rule": "pythonsecurity:S2076",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/7"
+    },
+    {
+      "number": 8,
+      "tool": "SonarCloud",
+      "rule": "secrets:S7552",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/8"
+    },
+    {
+      "number": 9,
+      "tool": "SonarCloud",
+      "rule": "python:S4502",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/9"
+    },
+    {
+      "number": 10,
+      "tool": "SonarCloud",
+      "rule": "python:S4790",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/10"
+    },
+    {
+      "number": 11,
+      "tool": "SonarCloud",
+      "rule": "python:S2068",
+      "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/security/code-scanning/11"
+    }
+  ],
+  "required_approving_review_count": 1,
+  "dismiss_stale_reviews": true
+}
