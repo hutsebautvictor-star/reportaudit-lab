@@ -1,0 +1,74 @@
+[
+  {
+    "ghsa_id": "GHSA-2g68-c3qc-8985",
+    "cve_id": "CVE-2024-34069",
+    "summary": "Werkzeug debugger vulnerable to remote execution when interacting with attacker controlled domain",
+    "html_url": "https://github.com/advisories/GHSA-2g68-c3qc-8985"
+  },
+  {
+    "ghsa_id": "GHSA-q34m-jh98-gwm2",
+    "cve_id": "CVE-2024-49767",
+    "summary": "Werkzeug possible resource exhaustion when parsing file data in forms",
+    "html_url": "https://github.com/advisories/GHSA-q34m-jh98-gwm2"
+  },
+  {
+    "ghsa_id": "GHSA-h75v-3vvj-5mfj",
+    "cve_id": "CVE-2024-34064",
+    "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+    "html_url": "https://github.com/advisories/GHSA-h75v-3vvj-5mfj"
+  },
+  {
+    "ghsa_id": "GHSA-h5c8-rqwp-cp95",
+    "cve_id": "CVE-2024-22195",
+    "summary": "Jinja vulnerable to HTML attribute injection when passing user input as keys to xmlattr filter",
+    "html_url": "https://github.com/advisories/GHSA-h5c8-rqwp-cp95"
+  },
+  {
+    "ghsa_id": "GHSA-f9vj-2wh5-fj8j",
+    "cve_id": "CVE-2024-49766",
+    "summary": "Werkzeug safe_join not safe on Windows",
+    "html_url": "https://github.com/advisories/GHSA-f9vj-2wh5-fj8j"
+  },
+  {
+    "ghsa_id": "GHSA-29vq-49wr-vm6x",
+    "cve_id": "CVE-2026-27199",
+    "summary": " Werkzeug safe_join() allows Windows special device names",
+    "html_url": "https://github.com/advisories/GHSA-29vq-49wr-vm6x"
+  },
+  {
+    "ghsa_id": "GHSA-q2x7-8rv6-6q7h",
+    "cve_id": "CVE-2024-56326",
+    "summary": "Jinja has a sandbox breakout through indirect reference to format method",
+    "html_url": "https://github.com/advisories/GHSA-q2x7-8rv6-6q7h"
+  },
+  {
+    "ghsa_id": "GHSA-hgf8-39gv-g3f2",
+    "cve_id": "CVE-2025-66221",
+    "summary": "Werkzeug safe_join() allows Windows special device names",
+    "html_url": "https://github.com/advisories/GHSA-hgf8-39gv-g3f2"
+  },
+  {
+    "ghsa_id": "GHSA-cpwx-vrp4-4pq7",
+    "cve_id": "CVE-2025-27516",
+    "summary": "Jinja2 vulnerable to sandbox breakout through attr filter selecting format method",
+    "html_url": "https://github.com/advisories/GHSA-cpwx-vrp4-4pq7"
+  },
+  {
+    "ghsa_id": "GHSA-87hc-h4r5-73f7",
+    "cve_id": "CVE-2026-21860",
+    "summary": " Werkzeug safe_join() allows Windows special device names with compound extensions",
+    "html_url": "https://github.com/advisories/GHSA-87hc-h4r5-73f7"
+  },
+  {
+    "ghsa_id": "GHSA-gmj6-6f8f-6699",
+    "cve_id": "CVE-2024-56201",
+    "summary": "Jinja has a sandbox breakout through malicious filenames",
+    "html_url": "https://github.com/advisories/GHSA-gmj6-6f8f-6699"
+  },
+  {
+    "ghsa_id": "GHSA-68rp-wp8r-4726",
+    "cve_id": "CVE-2026-27205",
+    "summary": "Flask session does not add `Vary: Cookie` header when accessed in some ways",
+    "html_url": "https://github.com/advisories/GHSA-68rp-wp8r-4726"
+  }
+]

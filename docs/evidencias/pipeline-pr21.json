@@ -1,0 +1,22 @@
+[
+  {
+    "name": "SonarCloud Code Analysis",
+    "conclusion": "success",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/runs/111911763149"
+  },
+  {
+    "name": "CodeQL",
+    "conclusion": "success",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/runs/111911719719"
+  },
+  {
+    "name": "SAST - CodeQL",
+    "conclusion": "success",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/37353921995/job/111911387117"
+  },
+  {
+    "name": "SAST - SonarQube Cloud",
+    "conclusion": "success",
+    "url": "https://github.com/hutsebautvictor-star/reportaudit-lab/actions/runs/37353921995/job/111911386942"
+  }
+]

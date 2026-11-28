@@ -1,0 +1,501 @@
+{
+  "total": 6,
+  "p": 1,
+  "ps": 100,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 100,
+    "total": 6
+  },
+  "effortTotal": 155,
+  "debtTotal": 155,
+  "issues": [
+    {
+      "key": "AaENOHGeJ07NNu4kkm7X",
+      "rule": "python:S2068",
+      "severity": "MAJOR",
+      "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+      "project": "hutsebautvictor-star_reportaudit-lab",
+      "line": 22,
+      "hash": "89e9d27ea489a47cca83e7c59a6fb87d",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 0,
+        "endOffset": 34
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "\"password\" detected here, review this potentially hard-coded credential.",
+      "effort": "30min",
+      "debt": "30min",
+      "assignee": "hutsebautvictor-star-rldYo@github",
+      "tags": [
+        "cwe",
+        "former-hotspot",
+        "secret"
+      ],
+      "creationDate": "2026-10-05T17:35:34+0000",
+      "updateDate": "2026-10-05T17:59:12+0000",
+      "type": "VULNERABILITY",
+      "organization": "hutsebautvictor-star",
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "reportaudit-lab",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "c508b691-2857-440a-a836-f24b02547e71",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaENOHGeJ07NNu4kkm7Z",
+      "rule": "secrets:S7552",
+      "severity": "BLOCKER",
+      "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+      "project": "hutsebautvictor-star_reportaudit-lab",
+      "line": 22,
+      "hash": "89e9d27ea489a47cca83e7c59a6fb87d",
+      "textRange": {
+        "startLine": 22,
+        "endLine": 22,
+        "startOffset": 17,
+        "endOffset": 33
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make sure this SMTP password gets revoked, changed, and removed from the code.",
+      "effort": "30min",
+      "debt": "30min",
+      "assignee": "hutsebautvictor-star-rldYo@github",
+      "tags": [
+        "cwe",
+        "secret"
+      ],
+      "creationDate": "2026-10-05T17:35:34+0000",
+      "updateDate": "2026-10-05T17:59:12+0000",
+      "type": "VULNERABILITY",
+      "organization": "hutsebautvictor-star",
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "reportaudit-lab",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "c508b691-2857-440a-a836-f24b02547e71",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaENOHGeJ07NNu4kkm7b",
+      "rule": "pythonsecurity:S3649",
+      "severity": "BLOCKER",
+      "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+      "project": "hutsebautvictor-star_reportaudit-lab",
+      "line": 42,
+      "hash": "fa099130abcb680329cc1d19fed5d70e",
+      "textRange": {
+        "startLine": 42,
+        "endLine": 42,
+        "startOffset": 4,
+        "endOffset": 25
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 42,
+                "endLine": 42,
+                "startOffset": 4,
+                "endOffset": 25
+              },
+              "msg": "Sink: this invocation is not safe; a malicious value can be used as argument"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 41,
+                "endLine": 41,
+                "startOffset": 4,
+                "endOffset": 77
+              },
+              "msg": "A malicious value can be assigned to variable ‘query’"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 41,
+                "endLine": 41,
+                "startOffset": 12,
+                "endOffset": 77
+              },
+              "msg": "This concatenation can propagate malicious content to the newly created string"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 41,
+                "endLine": 41,
+                "startOffset": 57,
+                "endOffset": 71
+              },
+              "msg": "The malicious content is concatenated into the string"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 37,
+                "endLine": 37,
+                "startOffset": 28,
+                "endOffset": 42
+              },
+              "msg": "This instruction can propagate malicious content"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 37,
+                "endLine": 37,
+                "startOffset": 4,
+                "endOffset": 27
+              },
+              "msg": "This instruction can propagate malicious content"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+              "textRange": {
+                "startLine": 42,
+                "endLine": 42,
+                "startOffset": 12,
+                "endOffset": 44
+              },
+              "msg": "This instruction can propagate malicious content"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+              "textRange": {
+                "startLine": 41,
+                "endLine": 41,
+                "startOffset": 4,
+                "endOffset": 45
+              },
+              "msg": "A malicious value can be assigned to variable ‘cliente’"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+              "textRange": {
+                "startLine": 41,
+                "endLine": 41,
+                "startOffset": 14,
+                "endOffset": 45
+              },
+              "msg": "Source: a user can craft an HTTP request with malicious content"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "SQL Injection via unsanitized user input in reporte_auditoria.buscar_reportes_cliente()",
+      "effort": "30min",
+      "debt": "30min",
+      "assignee": "hutsebautvictor-star-rldYo@github",
+      "tags": [
+        "cwe",
+        "sql"
+      ],
+      "creationDate": "2026-10-05T17:35:34+0000",
+      "updateDate": "2026-10-05T17:59:12+0000",
+      "type": "VULNERABILITY",
+      "organization": "hutsebautvictor-star",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "reportaudit-lab",
+      "internalTags": [
+        "taint"
+      ],
+      "lastChangeAnalysisUuid": "c508b691-2857-440a-a836-f24b02547e71",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaENOHGeJ07NNu4kkm7a",
+      "rule": "pythonsecurity:S2076",
+      "severity": "BLOCKER",
+      "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+      "project": "hutsebautvictor-star_reportaudit-lab",
+      "line": 51,
+      "hash": "4ade2f32e4804e42c0df9feac097d841",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 4,
+        "endOffset": 22
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 51,
+                "endLine": 51,
+                "startOffset": 4,
+                "endOffset": 22
+              },
+              "msg": "Sink: this invocation is not safe; a malicious value can be used as argument"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 50,
+                "endLine": 50,
+                "startOffset": 4,
+                "endOffset": 77
+              },
+              "msg": "A malicious value can be assigned to variable ‘comando’"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 50,
+                "endLine": 50,
+                "startOffset": 14,
+                "endOffset": 77
+              },
+              "msg": "This concatenation can propagate malicious content to the newly created string"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 50,
+                "endLine": 50,
+                "startOffset": 31,
+                "endOffset": 45
+              },
+              "msg": "The malicious content is concatenated into the string"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 48,
+                "endLine": 48,
+                "startOffset": 20,
+                "endOffset": 34
+              },
+              "msg": "This instruction can propagate malicious content"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+              "textRange": {
+                "startLine": 48,
+                "endLine": 48,
+                "startOffset": 4,
+                "endOffset": 19
+              },
+              "msg": "This instruction can propagate malicious content"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+              "textRange": {
+                "startLine": 55,
+                "endLine": 55,
+                "startOffset": 17,
+                "endOffset": 41
+              },
+              "msg": "This instruction can propagate malicious content"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+              "textRange": {
+                "startLine": 53,
+                "endLine": 53,
+                "startOffset": 4,
+                "endOffset": 45
+              },
+              "msg": "A malicious value can be assigned to variable ‘archivo’"
+            },
+            {
+              "component": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+              "textRange": {
+                "startLine": 53,
+                "endLine": 53,
+                "startOffset": 14,
+                "endOffset": 45
+              },
+              "msg": "Source: a user can craft an HTTP request with malicious content"
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Command Injection via unsanitized user input in reporte_auditoria.convertir_a_pdf()",
+      "effort": "30min",
+      "debt": "30min",
+      "assignee": "hutsebautvictor-star-rldYo@github",
+      "tags": [
+        "cwe"
+      ],
+      "creationDate": "2026-10-05T17:35:34+0000",
+      "updateDate": "2026-10-05T17:59:12+0000",
+      "type": "VULNERABILITY",
+      "organization": "hutsebautvictor-star",
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "BLOCKER"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "reportaudit-lab",
+      "internalTags": [
+        "taint"
+      ],
+      "lastChangeAnalysisUuid": "c508b691-2857-440a-a836-f24b02547e71",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaENOHGeJ07NNu4kkm7Y",
+      "rule": "python:S4790",
+      "severity": "CRITICAL",
+      "component": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+      "project": "hutsebautvictor-star_reportaudit-lab",
+      "line": 57,
+      "hash": "54abe93ff35186c01254c446e863b38b",
+      "textRange": {
+        "startLine": 57,
+        "endLine": 57,
+        "startOffset": 19,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make sure that hashing data is safe here.",
+      "effort": "30min",
+      "debt": "30min",
+      "assignee": "hutsebautvictor-star-rldYo@github",
+      "tags": [
+        "cryptography",
+        "cwe",
+        "former-hotspot"
+      ],
+      "creationDate": "2026-10-05T17:35:34+0000",
+      "updateDate": "2026-10-05T17:59:12+0000",
+      "type": "VULNERABILITY",
+      "organization": "hutsebautvictor-star",
+      "cleanCodeAttribute": "TRUSTWORTHY",
+      "cleanCodeAttributeCategory": "RESPONSIBLE",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "reportaudit-lab",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "c508b691-2857-440a-a836-f24b02547e71",
+      "lastChangeSource": "ANALYSIS"
+    },
+    {
+      "key": "AaENOHIoJ07NNu4kkm7c",
+      "rule": "python:S4502",
+      "severity": "CRITICAL",
+      "component": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+      "project": "hutsebautvictor-star_reportaudit-lab",
+      "line": 25,
+      "hash": "179643042db29a9995dc460d16749c31",
+      "textRange": {
+        "startLine": 25,
+        "endLine": 25,
+        "startOffset": 6,
+        "endOffset": 21
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Make sure disabling CSRF protection is safe here.",
+      "effort": "5min",
+      "debt": "5min",
+      "assignee": "hutsebautvictor-star-rldYo@github",
+      "tags": [
+        "cwe",
+        "django",
+        "flask",
+        "former-hotspot"
+      ],
+      "creationDate": "2026-10-05T17:35:34+0000",
+      "updateDate": "2026-10-05T17:59:12+0000",
+      "type": "VULNERABILITY",
+      "organization": "hutsebautvictor-star",
+      "cleanCodeAttribute": "CONVENTIONAL",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "SECURITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "projectName": "reportaudit-lab",
+      "internalTags": [],
+      "lastChangeAnalysisUuid": "c508b691-2857-440a-a836-f24b02547e71",
+      "lastChangeSource": "ANALYSIS"
+    }
+  ],
+  "components": [
+    {
+      "organization": "hutsebautvictor-star",
+      "key": "hutsebautvictor-star_reportaudit-lab",
+      "uuid": "AaENOCBtNSV4mnU4oC0b",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "reportaudit-lab",
+      "longName": "reportaudit-lab"
+    },
+    {
+      "organization": "hutsebautvictor-star",
+      "key": "hutsebautvictor-star_reportaudit-lab:app/reporte_auditoria.py",
+      "uuid": "AaENOGlvJ07NNu4kkm7R",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "reporte_auditoria.py",
+      "longName": "app/reporte_auditoria.py",
+      "path": "app/reporte_auditoria.py"
+    },
+    {
+      "organization": "hutsebautvictor-star",
+      "key": "hutsebautvictor-star_reportaudit-lab:app/servicio.py",
+      "uuid": "AaENOGlvJ07NNu4kkm7S",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "servicio.py",
+      "longName": "app/servicio.py",
+      "path": "app/servicio.py"
+    }
+  ],
+  "organizations": [
+    {
+      "key": "hutsebautvictor-star",
+      "name": "hutsebautvictor-star"
+    }
+  ],
+  "facets": []
+}
